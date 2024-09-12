@@ -6,9 +6,19 @@
 </head>
 
 <body>
+    <label>Bán kính hình tròn = </label>
+    <input id="r" type="number" placeholder="Nhập vào bán kính hình tròn">
+    <button onclick="calculate()">Tính diện tích</button>
+    <br><br>
+    <label>Diện tích hình tròn = </label><label id="output"></label>
 
     <script>
-        
+        function calculate(){
+            let r = +document.getElementById("r").value
+            let s = r * r * Math.PI
+            s = Math.round(s*100)/100
+            document.getElementById("output").innerHTML = s
+        }
     </script>
 </body> 
 </html>

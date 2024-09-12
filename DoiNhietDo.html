@@ -6,9 +6,16 @@
 </head>
 
 <body>
+    <input id="degree" type="number" placeholder="Nhiệt độ C">
+    <button onclick="convert()">Đổi sang độ F</button>
 
     <script>
-        
+        function convert(){
+            let numC = +document.getElementById("degree").value
+            let numF = 5*(numC-32)/9
+            numF = Math.round(numF*100)/100
+            document.write(`Nhiệt độ F = ${numF}`)
+        }
     </script>
 </body> 
 </html>

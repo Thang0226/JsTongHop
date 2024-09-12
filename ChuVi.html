@@ -6,9 +6,16 @@
 </head>
 
 <body>
+    <input id="r" type="number" placeholder="Nhập vào bán kính hình tròn">
+    <button onclick="calculate()">Tính chu vi hình tròn</button>
 
     <script>
-        
+        function calculate(){
+            let r = +document.getElementById("r").value
+            let p = 2 * r * Math.PI
+            p = Math.round(p*100)/100
+            document.write(`Chu vi hình tròn = ${p}`)
+        }
     </script>
 </body> 
 </html>

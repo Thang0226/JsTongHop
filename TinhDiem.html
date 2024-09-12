@@ -2,13 +2,34 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>DoiNhietDo</title>
+    <title>TinhDiem</title>
 </head>
 
 <body>
+    <form id="form">
+        <input id="diem1" type="number" placeholder="Điểm Vật lý"><br><br>
+        <input id="diem2" type="number" placeholder="Điểm Hoá học"><br><br>
+        <input id="diem3" type="number" placeholder="Điểm Sinh học"><br><br>
+        <button id="button">Hoàn thành nhập điểm</button>
+    </form>
 
     <script>
-        
+        document.getElementById("form").addEventListener("submit",tinhtoan)
+        function tinhtoan() {
+            console.log('function called')
+
+            let diem1 = +document.getElementById("diem1").value
+            let diem2 = +document.getElementById("diem2").value
+            let diem3 = +document.getElementById("diem3").value
+
+            let tong = diem1 + diem2 + diem3
+            document.write(`Tổng điểm 3 môn: ${tong}`)
+            document.write('<br>')
+
+            let diem_tb = tong/3
+            diem_tb = Math.round(diem_tb*100)/100
+            document.write(`Điểm trung bình: ${diem_tb}`)
+        }
     </script>
 </body> 
 </html>
